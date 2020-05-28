@@ -1,1 +1,7 @@
 <h1>Welcome <%= @user.name %>!!</h1>
+
+<ul>
+  <% @events.each do |event| %>
+    <li> <%= event.name %> </li>
+  <% end %>
+</ul>

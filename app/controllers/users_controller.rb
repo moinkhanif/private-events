@@ -25,6 +25,7 @@ class UsersController < ApplicationController
   def show
     unless User.where(id: params[:id]).empty?
       @user =  User.find(params[:id])
+      @events = @user.events
       render :show
     else
       flash[:alert] = "User does not exist!"
