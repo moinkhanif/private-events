@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   #This method checks if we have a user signed in
   def login_required
     if !logged_in?
+          flash[:alert] = "You need to login first!"
           redirect_to new_session_path
     end
   end
