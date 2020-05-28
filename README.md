@@ -7,7 +7,6 @@
 
 ## About the project
 
-
 ## Requirements
 
 - Once you download the project, please make sure that you have [Ruby](https://www.ruby-lang.org/en/) installed.
@@ -17,7 +16,6 @@
 ## Features
 
 Some of the features of this project include:
-
 
 ## Technologies Used
 
