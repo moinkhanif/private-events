@@ -1,6 +1,7 @@
-<h1>Welcome <%= @user.name %>!!</h1>
+<h1><%= @user.name %>'s Profile</h1>
+<h3>Invitations:</h3>
 <ul>
-  <% @events.each do |event| %>
-    <li> <%= link_to event.name , user_event_path(current_user.id,event)%> </li>
+  <% @user.invites.each do |invite| %>
+    <li> <%= link_to Event.where(id: invite.event_id).first.name, event_path(invite.event_id)%> </li>
   <% end %>
 </ul>

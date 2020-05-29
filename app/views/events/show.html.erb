@@ -1,3 +1,9 @@
 <h1><%= @event.name %></h1>
 <p><strong>Created by: <%= User.where(id: @event.user_id).first.name %></strong></p>
 <p> <%= @event.body%> </p>
+<h3>Guests:</h3>
+<ul>
+  <% @event.guests.each do |i| %>
+    <li> <%= link_to i.name , user_path(i.id)%> </li>
+  <% end %>
+</ul>

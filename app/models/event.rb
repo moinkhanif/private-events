@@ -1,5 +1,5 @@
 class Event < ApplicationRecord
-  validates_presence_of :name, :body, :date
+  validates_presence_of :name, :body, :date, :user_id
 
   belongs_to :user
   
