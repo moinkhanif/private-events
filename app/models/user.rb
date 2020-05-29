@@ -1,4 +1,4 @@
 class User < ApplicationRecord
-  has_many :creators
-  has_many :events, through: :creators
+  has_many :invites
+  has_many :events, through: :invites
 end
