@@ -1,5 +1,23 @@
-<ul>
-  <% @events.each do |event| %>
-    <li> <%= link_to event.name , user_event_path(current_user.id,event)%> </li>
+<h1 class="title">All Events!</h1>
+<h3>Past Events:</h3>
+<% if past_events(@events).size > 0 %>
+<ul class="list-nav">
+  <% past_events(@events).each do |event| %>
+    <li> <%= link_to Event.where(id: event.id).first.name, event_path(event.id)%> </li>
   <% end %>
 </ul>
+<% else %>
+    <h4>No past events found!</h4>
+<% end %>
+
+<h3>Upcoming Events:</h3>
+<% if upcoming_events(@events).size > 0 %>
+<ul class="list-nav">
+  <% upcoming_events(@events).each do |event| %>
+    <li> <%= link_to Event.where(id: event.id).first.name, event_path(event.id)%> </li>
+  <% end %>
+</ul>
+<% else %>
+    <h4>No upcoming! events found!</h4>
+<% end %>
+

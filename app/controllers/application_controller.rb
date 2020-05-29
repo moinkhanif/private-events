@@ -29,4 +29,16 @@ class ApplicationController < ActionController::Base
   end
 
   helper_method :current_user
+
+  def past_events(events)
+    @past = events.past_date
+  end
+
+  helper_method :past_events
+
+  def upcoming_events(events)
+    @upcoming = events.upcoming_date
+  end
+
+  helper_method :upcoming_events
 end

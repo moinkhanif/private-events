@@ -18,8 +18,4 @@ class EventsController < ApplicationController
       redirect_to new_events_path
     end
   end
-
-  def event_params
-    
-  end
 end

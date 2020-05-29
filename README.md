@@ -7,6 +7,8 @@
 
 ## About the project
 
+This was a collaborative project to create a Private Events page which allows users to create account and events, along with session creation and destruction.
+
 ## Requirements
 
 - Once you download the project, please make sure that you have [Ruby](https://www.ruby-lang.org/en/) installed.
@@ -16,6 +18,14 @@
 ## Features
 
 Some of the features of this project include:
+
+- User authentication using session id
+
+- Content authorization based on session input
+
+- Creation of User account and events
+
+- Display of past event and upcoming events on both user page and events page
 
 ## Technologies Used
 
