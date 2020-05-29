@@ -6,12 +6,12 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.where( name: params[:name] ).first
+    @user = User.where(name: params[:name]).first
     if @user
       session[:user_id] = @user.id
       redirect_to root_path
     else
-      flash[:alert] = "Invalid name!"
+      flash[:alert] = 'Invalid name!'
       redirect_to login_path
     end
   end
@@ -22,7 +22,8 @@ class SessionsController < ApplicationController
   end
 
   private
-    def login(user)
-      session[:user_id] = nil
-    end
+
+  def login(_user)
+    session[:user_id] = nil
+  end
 end

@@ -4,11 +4,11 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :login_required, except: [:index]
 
-  #This method checks if we have a user signed in
+  # This method checks if we have a user signed in
   def login_required
-    if !logged_in?
-          flash[:alert] = "You need to login first!"
-          redirect_to new_session_path
+    unless logged_in?
+      flash[:alert] = 'You need to login first!'
+      redirect_to new_session_path
     end
   end
 
@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
 
   helper_method :logged_in?
 
-  #This method gives us details about our user
+  # This method gives us details about our user
   def current_user
     if session[:user_id]
       @current_user = User.find(session[:user_id])
