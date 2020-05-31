@@ -5,4 +5,7 @@ class Event < ApplicationRecord
 
   has_many :invites
   has_many :guests, through: :invites, source: :user
+
+  scope :upcoming_date, -> { select { |event| event.date >= Time.now } }
+  scope :past_date, -> { select { |event| event.date < Time.now } }
 end
