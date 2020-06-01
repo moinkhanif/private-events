@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   skip_before_action :login_required
 
   def index
-    @user = current_user ? current_user.name : "Guest"
+    @user = current_user ? current_user.name : 'Guest'
   end
 
   def new
