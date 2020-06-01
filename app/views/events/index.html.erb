@@ -1,8 +1,8 @@
 <h1 class="title">All Events!</h1>
 <h3>Past Events:</h3>
-<% if past_events(@events).size > 0 %>
+<% if Event.past_date.size > 0 %>
 <ul class="list-nav">
-  <% past_events(@events).each do |event| %>
+  <% Event.past_date.each do |event| %>
     <li> <%= link_to Event.where(id: event.id).first.name, event_path(event.id)%> </li>
   <% end %>
 </ul>
@@ -11,9 +11,9 @@
 <% end %>
 
 <h3>Upcoming Events:</h3>
-<% if upcoming_events(@events).size > 0 %>
+<% if Event.upcoming_date.size > 0 %>
 <ul class="list-nav">
-  <% upcoming_events(@events).each do |event| %>
+  <% Event.upcoming_date.each do |event| %>
     <li> <%= link_to Event.where(id: event.id).first.name, event_path(event.id)%> </li>
   <% end %>
 </ul>

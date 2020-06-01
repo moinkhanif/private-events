@@ -8,4 +8,13 @@ class Event < ApplicationRecord
 
   scope :upcoming_date, -> { select { |event| event.date >= Time.zone.now } }
   scope :past_date, -> { select { |event| event.date < Time.zone.now } }
+
+  # def past_events(events)
+  #   @past = events.past_date
+  # end
+
+  # def upcoming_events(events)
+  #   @upcoming = events.upcoming_date
+  # end
+
 end
