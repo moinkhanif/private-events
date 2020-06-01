@@ -2,28 +2,12 @@
 <br>
 <h3>Invitations:</h3>
 <ul class = "list-nav">
-  <% @user_invites.each do |invite| %>
-    <li> <%= link_to Event.where(id: invite.event_id).first.name, event_path(invite.event_id)%> </li>
-  <% end %>
+  <%= user_invites_action %>
 </ul>
 <br>
 <h3>Past Events:</h3>
-<% if @user_past_events.size > 0 %>
-<ul class="list-nav">
-  <% @user_past_events.each do |event| %>
-    <li> <%= link_to event.name, event_path(event.id)%> </li>
-  <% end %>
-</ul>
-<% else %>
-    <h4>No past events found!</h4>
-<% end %>
+<%= user_past_events_action %>
+<br>
 <h3>Upcoming Events:</h3>
-<% if @user_upcoming_events.size > 0 %>
-<ul class="list-nav">
-  <% @user_upcoming_events.each do |event| %>
-    <li> <%= link_to event.name, event_path(event.id)%> </li>
-  <% end %>
-</ul>
-<% else %>
-    <h4>No upcoming! events found!</h4>
-<% end %>
+<%= user_upcoming_events_action %>
+

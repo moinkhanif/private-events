@@ -15,15 +15,7 @@
         <ul class = "navbar">
           <li><%= link_to "Home", root_path%></li>
           <li><%= link_to "Events", events_path %></li>
-          
-          <% if current_user %>
-          <li><%= link_to "Profile", user_path(current_user)%></li>
-          <li><%= link_to "Create Event", new_event_path %></li>
-          <li><%= link_to "Logout", logout_path%></li>
-          <% else %>
-          <li><%= link_to "Login", login_path%></li>
-          <li><%= link_to "Sign Up", signup_path%></li>
-          <% end %>
+         <%= menu_action %>
         </ul>
       </nav>
     </header>
