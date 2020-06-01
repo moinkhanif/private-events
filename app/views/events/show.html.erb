@@ -1,5 +1,5 @@
 <h1 class="title"><%= @event.name %></h1>
-<p><strong>Created by: <%= User.where(id: @event.user_id).first.name %></strong></p>
+<p><strong>Created by: <%= @event_creator.name %></strong></p>
 <p> <%= @event.body%> </p>
 <h3>Attendees:</h3>
 <ul>

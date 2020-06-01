@@ -1,27 +1,27 @@
 <h1 class="title"><%= @user.name %>'s Profile</h1>
+<br>
 <h3>Invitations:</h3>
 <ul class = "list-nav">
-  <% @user.invites.each do |invite| %>
+  <% @user_invites.each do |invite| %>
     <li> <%= link_to Event.where(id: invite.event_id).first.name, event_path(invite.event_id)%> </li>
   <% end %>
 </ul>
-
+<br>
 <h3>Past Events:</h3>
-<% if @user.events.past_date.size > 0 %>
+<% if @user_past_events.size > 0 %>
 <ul class="list-nav">
-  <% @user.events.past_date.each do |event| %>
-    <li> <%= link_to Event.where(id: event.id).first.name, event_path(event.id)%> </li>
+  <% @user_past_events.each do |event| %>
+    <li> <%= link_to event.name, event_path(event.id)%> </li>
   <% end %>
 </ul>
 <% else %>
     <h4>No past events found!</h4>
 <% end %>
-
 <h3>Upcoming Events:</h3>
-<% if @user.events.upcoming_date.size > 0 %>
+<% if @user_upcoming_events.size > 0 %>
 <ul class="list-nav">
-  <% @user.events.upcoming_date.each do |event| %>
-    <li> <%= link_to Event.where(id: event.id).first.name, event_path(event.id)%> </li>
+  <% @user_upcoming_events.each do |event| %>
+    <li> <%= link_to event.name, event_path(event.id)%> </li>
   <% end %>
 </ul>
 <% else %>

@@ -27,7 +27,10 @@ class UsersController < ApplicationController
       redirect_to signup_path
     else
       @user = User.find(params[:id])
-      @events = @user.events
+      @created_events = @user.events
+      @user_past_events = @created_events.past_date
+      @user_upcoming_events = @created_events.upcoming_date
+      @user_invites = @user.invites
     end
   end
 
