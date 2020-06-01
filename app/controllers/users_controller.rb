@@ -2,8 +2,7 @@ class UsersController < ApplicationController
   skip_before_action :login_required
 
   def index
-    current_user = User.where(session[:current_user_id]).first
-    @user = current_user.name if current_user
+    @user = current_user ? current_user.name : "Guest"
   end
 
   def new
@@ -29,7 +28,6 @@ class UsersController < ApplicationController
     else
       @user = User.find(params[:id])
       @events = @user.events
-      render :show
     end
   end
 

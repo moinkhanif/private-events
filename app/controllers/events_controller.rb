@@ -5,7 +5,7 @@ class EventsController < ApplicationController
   end
 
   def index
-    @events = Event.all
+    @events = Event.all.limit(10)
   end
 
   def new
