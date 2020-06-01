@@ -1,14 +1,22 @@
 module ApplicationHelper
   def menu_action
-    html = ''
     if current_user
-      html += link_to "Profile", user_path(current_user)
-      html += link_to "Create Event", new_event_path
-      html += link_to "Logout", logout_path
+      concat(content_tag(:li) do
+        link_to 'Profile', user_path(current_user)
+      end)
+      concat(content_tag(:li) do
+        link_to 'Create Event', new_event_path
+      end)
+      content_tag(:li) do
+        link_to 'Logout', logout_path
+      end
     else
-      html += link_to "Login", login_path
-      html += link_to "Sign Up", signup_path
+      concat(content_tag(:li) do
+        link_to 'Login', login_path
+      end)
+      content_tag(:li) do
+        link_to 'Sign Up', signup_path
+      end
     end
-    html.html_safe
   end
 end
