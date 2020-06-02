@@ -1,0 +1,9 @@
+example_id                             | status | run_time        |
+-------------------------------------- | ------ | --------------- |
+./spec/models/event_spec.rb[1:1:1]     | passed | 0.05903 seconds |
+./spec/models/event_spec.rb[1:1:2]     | passed | 0.25529 seconds |
+./spec/models/invite_spec.rb[1:1:1]    | passed | 0.26629 seconds |
+./spec/models/invite_spec.rb[1:1:2]    | passed | 0.03897 seconds |
+./spec/models/user_spec.rb[1:1:1]      | passed | 0.11831 seconds |
+./spec/models/user_spec.rb[1:1:2]      | passed | 0.08464 seconds |
+./spec/views/user_index_spec.rb[1:1:1] | passed | 14.78 seconds   |
