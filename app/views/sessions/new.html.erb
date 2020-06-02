@@ -1,0 +1,4 @@
+<%= form_with url: sessions_path do |user| %>
+<%= user.text_field :name, autofocus: true %>
+<%= user.submit %>
+<% end %>
