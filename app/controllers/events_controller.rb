@@ -16,12 +16,17 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = current_user.events.build(name: params[:name], body: params[:body], date: params[:date])
-    # @event.user_ids << current_user.id
+    @event = current_user.events.build(event_params)
     if @event.save
       redirect_to user_path(current_user.id)
     else
       redirect_to new_events_path
     end
+  end
+
+  private
+
+  def event_params
+    params.require(:event).permit(:name, :body, :date)
   end
 end

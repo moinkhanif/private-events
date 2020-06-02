@@ -22,15 +22,15 @@ class UsersController < ApplicationController
   end
 
   def show
-    if User.where(id: params[:id]).empty?
-      flash[:alert] = 'User does not exist!'
-      redirect_to signup_path
-    else
-      @user = User.find(params[:id])
+    @user = User.find(params[:id])
+    if @user
       @created_events = @user.events
       @user_past_events = @created_events.past_date
       @user_upcoming_events = @created_events.upcoming_date
       @user_invites = @user.invites
+    else
+      flash[:alert] = 'User does not exist!'
+      redirect_to signup_path
     end
   end
 
