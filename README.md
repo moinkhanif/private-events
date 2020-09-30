@@ -51,7 +51,7 @@ Some of the features of this project include:
   - Personal Website: [MoinKhan.Info](https://moinkhanif.dev)
   - Twitter: [@MoinKhanIF](https://twitter.com/MoinKhanIF)
   
-<!-- MARKDOWN LINKS & IMAGES -->
+<!-- MARKDOWN LINKS & IMAGE -->
 
 [contributors-shield]: https://img.shields.io/github/contributors/moinkhanif/private-events.svg?style=flat-square
 [contributors-url]: https://github.com/moinkhanif/private-events/graphs/contributors
