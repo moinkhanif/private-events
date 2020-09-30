@@ -48,7 +48,7 @@ Some of the features of this project include:
 
 - Moin Khan
   - LinkedIn : [@MoinKhanIF](https://www.linkedin.com/in/moinkhanif/)
-  - Personal Website: [MoinKhan.Info](https://moinkhan.info)
+  - Personal Website: [MoinKhan.Info](https://moinkhanif.dev)
   - Twitter: [@MoinKhanIF](https://twitter.com/MoinKhanIF)
   
 <!-- MARKDOWN LINKS & IMAGES -->
