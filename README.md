@@ -33,7 +33,7 @@ Some of the features of this project include:
 
 <!-- 
 
-## Test
+## Testing
 
 ## Test Output
 
